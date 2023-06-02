@@ -1,6 +1,7 @@
-package com.ReactMacOs.ReactMacOs;
+package com.ReactMacOs.ReactMacOs.Controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -18,8 +19,9 @@ public class DocController {
      * 태그 파일명 확장자 수정일 크기
      * MAC 기준 하위 작업표시줄 느낌
      */
-    @RequestMapping("/")
-    public String index() {
-        return "Hi";
+
+    @RequestMapping(value = "/hellospring", method = RequestMethod.GET)
+    public String helloSpring() {
+        return "Hello Spring";
     }
 }
