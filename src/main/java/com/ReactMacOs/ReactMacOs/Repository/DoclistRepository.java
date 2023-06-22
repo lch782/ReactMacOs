@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import com.ReactMacOs.ReactMacOs.Entity.DoclistEntity;
 
-public interface DoclistRepository extends JpaRepository<DoclistEntity, Long>, JpaSpecificationExecutor<DoclistEntity> {
+public interface DoclistRepository
+        extends JpaRepository<DoclistEntity, Long>, JpaSpecificationExecutor<DoclistEntity>, DoclistRepositoryCustom {
 
 }

@@ -14,11 +14,10 @@ public class DoclistService {
     @Autowired
     DoclistRepository doclistRepository;
 
-    /*
-     * public void updateList(DoclistEntity doclistEntity) {
-     * 
-     * }
-     */
+    public void insertList(DoclistEntity doclistEntity) {
+        doclistRepository.insertList(doclistEntity);
+    }
+
     public List<DoclistEntity> selectList() {
         return doclistRepository.findAll();
     }

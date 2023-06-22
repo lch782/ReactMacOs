@@ -22,4 +22,10 @@ public class DocController {
     public List<DoclistEntity> docListSelect() {
         return doclistService.selectList();
     }
+
+    @PostMapping("insertList")
+    public void docListInsert(DoclistEntity doclistEntity) {
+        doclistService.insertList(doclistEntity);
+    }
+
 }
