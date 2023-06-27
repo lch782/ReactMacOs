@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,11 @@ import com.ReactMacOs.ReactMacOs.Service.DoclistService;
 public class DocController {
     @Autowired
     DoclistService doclistService;
+
+    @GetMapping("TestList")
+    public List<DoclistEntity> docListSelect2() {
+        return doclistService.selectList();
+    }
 
     @PostMapping("selectList")
     public List<DoclistEntity> docListSelect() {

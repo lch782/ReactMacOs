@@ -21,6 +21,8 @@ public class DoclistEntity implements Serializable {
      * SEQUENCE 전략 - 유일한 값을 순서대로 생성
      */
     @Id
+    @Column(name = "fileid", nullable = false)
+    private long fileid;
 
     @Column(name = "file_name", nullable = false)
     private String file_name;
